@@ -1,0 +1,113 @@
+{% extends 'hospital/homebase.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+
+<head>
+  <style media="screen">
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      background-image: url('{% static "images/bgg.jpg" %}');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .jumbotron h5,
+    h3 {
+      text-align: center;
+    }
+
+
+    .alert {
+      margin: 0px;
+    }
+
+
+    .fishes {
+
+  width: 150px;
+  height: 100px;
+}
+
+
+
+
+
+    .glow {
+      font-size: 50px;
+      color: white;
+      text-align: center;
+      -webkit-animation: glow 1s ease-in-out infinite alternate;
+      -moz-animation: glow 1s ease-in-out infinite alternate;
+      animation: glow 1s ease-in-out infinite alternate;
+    }
+
+    @-webkit-keyframes glow {
+      from {
+        text-shadow: 0 0 10px #eeeeee, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #9554b3, 0 0 60px #9554b3, 0 0 70px #9554b3;
+      }
+
+      to {
+        text-shadow: 0 0 20px #eeeeee, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+      }
+    }
+
+
+body, html {
+    height: 100%;width: 100%;
+    margin: 0;padding: 0;
+}
+
+
+svg{
+  width:200%; height:100%;
+  left:50%; top:50%; position:absolute;
+  transform: translate(-50%,-50%);
+}
+
+
+ .column2 {
+          position: sticky;
+        text-align: right;
+        bottom: 5;
+     color: white;
+      }
+
+  </style>
+
+
+</head>
+
+
+
+
+
+
+
+<br>
+<br>
+
+<div class="jumbotron" style="margin-bottom: 0px;margin-top: 0px;">
+  <br>
+  <h5 class="display-3 glow">HOSPITAL SOFTWARE </h5>
+  <br><br><br><br>
+   <img src="static/images/adminpropic.png" class="fishes"/>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="/patientclick" role="button">Take Appointment</a>
+  </p>
+<div class="column2">
+    This Software is designed by  <b>© Shamon Hashmi</b>
+      </div>
+
+</div>
+
+<br><br><br>
+
+{% include "hospital/admin_doctor_patient_card.html" %}
+<br><br><br>
+
+{% endblock content %}
