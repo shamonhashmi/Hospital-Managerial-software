@@ -9,7 +9,7 @@ from datetime import datetime,timedelta,date
 from django.conf import settings
 from django.db.models import Q
 
-# Create your views here.
+# Create your views heree.
 def home_view(request):
     if request.user.is_authenticated:
         return HttpResponseRedirect('afterlogin')
@@ -134,7 +134,7 @@ def afterlogin_view(request):
 
 
 #---------------------------------------------------------------------------------
-#------------------------ ADMIN RELATED VIEWS START ------------------------------
+#------------------------ ADMIN RELATED VIEWS START HERE ------------------------------
 #---------------------------------------------------------------------------------
 @login_required(login_url='adminlogin')
 @user_passes_test(is_admin)
